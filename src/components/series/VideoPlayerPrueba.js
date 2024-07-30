@@ -57,7 +57,7 @@ const CustomVideoPlayer = () => {
         onMouseEnter={() => setShowControls(true)}
         onMouseLeave={() => setShowControls(false)}
     >
-      <ReactPlayer
+      {/* <ReactPlayer
         ref={videoPlayerRef}
         className={`${fullscreen ? 'w-screen h-screen object-cover' : 'w-full h-64'}`}
         style={fullscreen ?{objectFit: 'cover'}:null}
@@ -67,7 +67,7 @@ const CustomVideoPlayer = () => {
         playing={isPlaying}
         onProgress={handleProgress}
         controls={false}
-      />
+      /> */}
       {showControls && <div className='absolute bottom-0 left-0 right-0 flex flex-col justify-center items-center'>
       <div className="mt-4 flex justify-center space-x-4">
         <button
