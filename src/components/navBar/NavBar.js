@@ -4,6 +4,8 @@ import IconMovieNight from "./Icon"
 import NoAuthenticated from "./NoAuthenticated"
 import { useAuth } from "@/context/authContext"
 
+
+
 export default function NavBar(){
     const { user } = useAuth()
     return (

@@ -20,7 +20,7 @@ const CardProfile =({profile, onPress})=>{
                 className='w-auto h-auto'
                 onClick={()=>onPress(profile.id)}>
                     
-            <img className='w-20 h-auto' resizeMode='contain' src={'https://occ-0-4857-2164.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABTYctxxbe-UkKEdlMxXm4FVGD6DqTHkQ0TQ5CQJ9jbOMnG0CYxYcSICcTUQz8DrB7CpKUGpqJVMtEqksLlvSJx2ac3Ak.png?r=a41'}/>
+            <img className='w-20 h-auto' src={'https://occ-0-4857-2164.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABTYctxxbe-UkKEdlMxXm4FVGD6DqTHkQ0TQ5CQJ9jbOMnG0CYxYcSICcTUQz8DrB7CpKUGpqJVMtEqksLlvSJx2ac3Ak.png?r=a41'}/>
             </button>
             <p className='text-white w-full text-center'>{profile.name}</p>
         </div>
@@ -68,25 +68,23 @@ const Profiles = ({navigation}) => {
                 <div className='container h-auto flex flex-wrap justify-center items-center'>
                     {profiles?.map((profile, index)=>{
                         return( 
-                            <>
+                            <React.Fragment key={profile.id+index}>
                             {setting?
                             <Link href={`?editar-perfil=true&id=${profile.id}`}>
-                                <div className='relative p-5'>
+                                <div className='relative p-5 '>
                                 <Icon path={mdiPencil} size={2} color='white' className='absolute top-0 right-0'/>
                                 <CardProfile
-                                    key = {index}
                                     profile = {profile}
                                     onPress={(e)=>console.log('')}
                                 />
                                 </div>
                            </Link>:
                             <CardProfile
-                                key = {index}
                                 profile = {profile}
                                 onPress = {selectProfile}
                             />
                            }
-                           </>
+                           </React.Fragment>
                         )
                     }
                     )}
