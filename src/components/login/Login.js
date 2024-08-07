@@ -1,10 +1,11 @@
 "use client"
-import LoadingStarting from './LoadingStarting';
 import Link from 'next/link';
-import React, { useEffect, useState } from "react";
-import {useAuth} from '@/context/authContext'
+import { useRouter } from 'next/navigation'
+import React, { useState } from "react";
+import { useAuth}  from '@/context/authContext'
 
 function Login(){
+  const router = useRouter()
   const [state, setState] = useState({
     email: "",
     password: "",
@@ -20,6 +21,8 @@ function Login(){
       const response =  await login(state.email, state.password)
       if(response.success){
         setState({ email: "", password: "",})
+        router.push('/into')
+
       }
       return response
 

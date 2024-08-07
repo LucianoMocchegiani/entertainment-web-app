@@ -11,7 +11,7 @@ export default function Authenticated(){
     }
     return (
         <>
-            <ul className="w-3/4 flex flex-row justify-between font-medium mt-4 rounded-lg invisible lg:visible xl:visible 2xl:visible">
+            <ul className="w-3/4 flex flex-row justify-between font-medium mt-4 rounded-lg invisible lg:visible xl:visible 2xl:visible pb-5">
                 <li>
                     <Link href="/into/home" className={pathname==="/into/home"? "block py-2 px-3 text-white bg-black rounded border-2 border-gray":"block bg-black py-2 px-3 text-slate-200 rounded"} aria-current="page">Home</Link>
                 </li>

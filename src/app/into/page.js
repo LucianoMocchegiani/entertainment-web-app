@@ -4,8 +4,8 @@ import { useEffect } from 'react';
 import Loading from '@/components/reusable/Loading';
 
 export default function into() {
+  const router = useRouter()
   useEffect(()=>{
-    const router = useRouter()
     router.push('/into/profiles')
   },[])
   return (
