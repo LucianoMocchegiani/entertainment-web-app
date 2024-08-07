@@ -20,7 +20,7 @@ const CardProfile =({profile, onPress})=>{
                 className='w-auto h-auto'
                 onClick={()=>onPress(profile.id)}>
                     
-            <img className='w-20 h-auto' src={'https://occ-0-4857-2164.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABTYctxxbe-UkKEdlMxXm4FVGD6DqTHkQ0TQ5CQJ9jbOMnG0CYxYcSICcTUQz8DrB7CpKUGpqJVMtEqksLlvSJx2ac3Ak.png?r=a41'}/>
+            <img className='w-20 h-auto' src={'https://occ-0-4857-2164.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABTYctxxbe-UkKEdlMxXm4FVGD6DqTHkQ0TQ5CQJ9jbOMnG0CYxYcSICcTUQz8DrB7CpKUGpqJVMtEqksLlvSJx2ac3Ak.png?r=a41'} alt='profile-image'/>
             </button>
             <p className='text-white w-full text-center'>{profile.name}</p>
         </div>

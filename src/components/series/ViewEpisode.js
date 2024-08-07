@@ -4,8 +4,7 @@ import {  getEpisodeDetailFirebase, getEpisodeDetail } from '@/firebase/endpoint
 import { getSerieDetail } from '@/firebase/endpoints/series'
 import { getSeasonDetail } from '@/firebase/endpoints/seasons'
 import CheckMyList from '../mylist/CheckMyListMovies'   
-import VideoPlayerEpisode from './VideoPlayerEpisode'
-import {  usePathname, useSearchParams, useRouter, useParams } from 'next/navigation'
+import { useRouter, useParams } from 'next/navigation'
 import SelectComponent from '../reusable/Select';
 import Link from 'next/link';
 import Icon from '@mdi/react';
@@ -62,9 +61,6 @@ const ViewEpisode = ({}) => {
     const [seasonData, setSeasonData] = useState(null)
     const [episodeData, setEpisodeData] = useState(null)
     const [loading, setLoading] = useState(false)
-    const searchParams = useSearchParams();
-    const fullscreen = searchParams.get('fullscreen') === 'true';
-    
 
     const setAsistant = async()=>{
         setLoading(true)

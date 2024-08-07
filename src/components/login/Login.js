@@ -41,7 +41,7 @@ function Login(){
     }
   }
   return (
-    <>    
+    <>      
     {/* {user?<LoadingStarting/>:null} */}
     <div className='container mx-auto h-full pb-7 flex justify-center items-center'>
         <div className="container mx-auto px-4 h-full mt-20 pt-7 pb-2 bg-white" style={{ backgroundImage:'url("https://assets.nflxext.com/ffe/siteui/vlv3/9c5457b8-9ab0-4a04-9fc1-e608d5670f1a/710d74e0-7158-408e-8d9b-23c219dee5df/IN-en-20210719-popsignuptwoweeks-perspective_alpha_website_small.jpg")', width:'100%', heigth:'100%', backgroundSize:'cover',}}>

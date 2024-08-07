@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useAuth } from '@/context/authContext';
 import { useStorage } from '@/context/storageContext'
 import Loading from '@/components/reusable/Loading';
-import {  usePathname, useSearchParams, useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import NavBar from "@/components/navBar/NavBar";
 import Footer from '@/components/footer/Footer';
 
@@ -12,11 +12,7 @@ export default function Layout({ children }) {
     const { handleSetUser, id } = useStorage()
     const [loading, setLoading] = useState(true)
     const [timeOut, setTimeOut] = useState(false)
-    const [error, setError ] = useState(false)
     const router = useRouter()
-    const pathname = usePathname();
-    const searchParams = useSearchParams();
-    const fullscreen = searchParams.get('fullscreen') === 'true';
 
     const setUser = async ()=>{
         setLoading(false)
@@ -54,9 +50,9 @@ export default function Layout({ children }) {
             <Loading/>
         </div>
         :null}
-        {!fullscreen?<NavBar/>:null}
+        <NavBar/>
         {children} 
-        {!fullscreen?<Footer/>:null}
+        <Footer/>
     </>
   );
 }
