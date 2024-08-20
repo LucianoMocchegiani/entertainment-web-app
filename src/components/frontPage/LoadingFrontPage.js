@@ -4,7 +4,7 @@ const LoadingFrontPage = () => {
     return (
         <>
             <div className='h-9/10 w-full flex justify-center'>
-                <Loading/>
+                <Loading color='black'/>
             </div>
         </>
     )

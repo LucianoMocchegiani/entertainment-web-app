@@ -5,9 +5,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Link from 'next/link'
 import { getMovies, getMovieDetailFirebase } from "@/firebase/endpoints/movies";
+import EsqueletoCard from "./EsqueletoCard";
 
 function CardMovie({movie}){
-  return( 
+  return(     
     <div key={movie?.id} onClick={()=>getMovieDetailFirebase()} className='mx-2 my-2 pb-1 px-1 shadow-lg'>
       <Link type="button"  href={"movies/"+movie?.id}>
         <img src={"https://image.tmdb.org/t/p/w500"+movie?.poster_path} className="w-66 h-80"/>
@@ -84,9 +85,10 @@ export default function Movies({
     <>
       <h3 className="text-white text-lg mt-10">{text}</h3>
       <Slider {...settings} className="pt-1 w-11/12">
-        {item?.map((e)=>(
+        {item.length?item.map((e)=>(
           <CardMovie movie={e}/> 
-        ))}
+        )): [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16].map((e)=>(
+          <EsqueletoCard key={e}/>))}
       </Slider>
     </>
   )

@@ -37,8 +37,6 @@ const SeriesPage = () => {
                     <Series text='Drama' label={selectLabel} requestType = {'genres'} platform={selectPlatform} genre={{id:18,name:'Drama'}} />
 					<Series text='Comedia' label={selectLabel} requestType = {'genres'} platform={selectPlatform} genre={{id:35,name:'Comedia'}} />
 					<Series text='Sci-Fi & Fantasy' label={selectLabel} requestType = {'genres'} platform={selectPlatform} genre={{id:10765,name:'Sci-Fi & Fantasy'}} />
-					<Series text='War & Politics' label={selectLabel} requestType = {'genres'} platform={selectPlatform} genre={{id:10768,name:'War & Politics'}} />
-					<Series text='Romance' label={selectLabel} requestType = {'genres'} platform={selectPlatform} genre={{id:10749 ,name:'Romance'}} />
                     
 				</>}
 			</div>

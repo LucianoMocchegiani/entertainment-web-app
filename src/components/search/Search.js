@@ -4,6 +4,7 @@ import { searchMoviesAlgolia } from '@/firebase/endpoints/movies'
 import Icon from '@mdi/react';
 import { mdiMagnify } from '@mdi/js';
 import Link from 'next/link'
+import EsqueletoCard from './EsqueletoCard';
 
 const SearchScreen = () => {
     const [search, setSearch] = useState('');
@@ -32,10 +33,10 @@ const SearchScreen = () => {
                         <input className='text-sm text-black m-2 bg-white .placeholder-gray-200 h-full w-full focus:outline-none border-none' value={search} onChange={(text) => handleSetSearch(text)}  placeholder="Busca peliculas y series." />
                     </div>
                 </div>
+                {!search?<h3 className="text-white text-lg mt-2">Mas buscadas</h3>:<h3 className="text-white text-lg mt-2 h-7"></h3>}
                 {
-                    results?.data && (
+                    results?(
                         <>
-                            {!search?<h3 className="text-white text-lg mt-2">Mas buscadas</h3>:<h3 className="text-white text-lg mt-2 h-7"></h3>}
                             <div className='flex flex-wrap w-10/12 m-4'>
                                 {results.data?.map((movie, item) => {
                                     return (
@@ -48,7 +49,12 @@ const SearchScreen = () => {
                                 })}
                             </div>
                         </>
-                    )
+                    ):(
+                        <div className='flex flex-wrap w-10/12 m-4'>{
+                            [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].map((e)=>{
+                                return (<EsqueletoCard key={e}/>)})
+                            }
+                        </div>)
                 }
             </div >
         </>

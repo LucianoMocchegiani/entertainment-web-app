@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Link from 'next/link'
 import { getSeries } from "@/firebase/endpoints/series";
+import EsqueletoCard from "./EsqueletoCard";
 
 
 function CardSerie({serie}){
@@ -84,9 +85,10 @@ export default function Series({
     <>
       <h3 className="text-white text-lg mt-10">{text}</h3>
       <Slider {...settings} className="pt-1 w-11/12">
-        {item?.map((e)=>(
+        {item.length?item.map((e)=>(
           <CardSerie serie={e}/> 
-        ))}
+        )): [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16].map((e)=>(
+          <EsqueletoCard key={e}/>))}
       </Slider>
     </>
   )

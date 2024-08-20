@@ -81,9 +81,8 @@ const ViewEpisode = ({}) => {
     return !loading?(
         <>
            <div className='flex flex-col justify-center items-center '>
-                {/* <VideoPlayerEpisode/> */}
+           <p className='text-white text-lg mb-3 mt-1'>{serieData?.name}</p>
                 <CustomVideoPlayer/>
-                {!fullscreen?
                  <div className='flex flex-col justify-center items-center w-8/12'>
                     <p className='text-white text-lg mb-3 mt-1'>{serieData?.name}</p>
                     <div className='flex flex-row justify-center items-center content-center h-auto py-1'>
@@ -116,7 +115,7 @@ const ViewEpisode = ({}) => {
                     <p className='text-white w-8/12 text-lg'>
                         {episodeData?.overview}
                     </p>
-                </div>:null}
+                </div>
             </div>
         </>
         

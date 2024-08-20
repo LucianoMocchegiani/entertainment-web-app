@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { getMovieDetailFirebase } from '@/firebase/endpoints/movies'
 import CheckMyList from '../mylist/CheckMyListMovies'
 // import VideoPlayerMovie from './VideoPlayerMovie'
+import CustomVideoPlayer from '../series/VideoPlayerPrueba'
 import { useParams } from "next/navigation";
 const poster = process.env.NEXT_POSTER_PATCH_URL 
 
@@ -33,18 +34,10 @@ const ViewMovie = ({ }) => {
     return !loading ? (
         <>
            <div className='flex flex-col justify-center items-center'>
-                {/* <VideoPlayerMovie 
-                    data={state?.data}
-                    posterPatch={state?.data?.poster_path?poster+state?.data?.poster_path:null}
-                    videoPatch={'https://firebasestorage.googleapis.com/v0/b/entertainment-app-87f62.appspot.com/o/m-videos%2F'+1014590+'?alt=media&token=fb2e31d1-e141-4695-97e8-f184f5907fcd'}
-                    // videoPatch={state?.data?.firestore_url_video?STREAMING_MOVIES_URL+'/'+state.data.firestore_url_video:null}
-                    id={state?.data?.id}
-                    fullscreen={fullscreen}
-                    setFullscreen={setFullscreen}
-                /> */}
+           <p className='text-white text-lg'>{state?.data?.title}</p>
+                <CustomVideoPlayer/>
                 {!fullscreen?
                  <div className='flex flex-col justify-center items-center w-8/12'>
-                    <p className='text-white text-lg'>{state?.data?.title}</p>
                     <div className='flex flex-row justify-center items-center content-center h-auto py-5'>
                         <p className='text-white mx-5'>13+</p>
                         <p className='text-white mx-5'>{state?.data?.release_date}</p>

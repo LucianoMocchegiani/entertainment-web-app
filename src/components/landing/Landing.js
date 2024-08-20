@@ -7,7 +7,7 @@ import WebButton from "./Web";
 const Landing = ({}) => {
 
     return (
-        <>
+        <>  
             <LoadingStarting/>
             <div className='w-full h-screen flex flex-wrap justify-center items-center'>
                 {/* <Image src={MovieImage} width={400}  alt="Movie Night"/> */}

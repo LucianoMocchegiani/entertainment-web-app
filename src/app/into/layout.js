@@ -46,7 +46,7 @@ export default function Layout({ children }) {
 
   return (
     <>{loading?
-        <div className='w-full h-screen fixed bg-white flex justify-center z-50'>
+        <div className='w-full h-screen fixed bg-black flex justify-center z-50'>
             <Loading/>
         </div>
         :null}
