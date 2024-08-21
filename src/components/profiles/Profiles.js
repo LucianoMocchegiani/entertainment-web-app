@@ -20,7 +20,7 @@ const CardProfile =({profile, onPress})=>{
                 className='w-auto h-auto'
                 onClick={()=>onPress(profile.id)}>
                     
-            <img className='w-20 h-auto' src={'https://occ-0-4857-2164.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABTYctxxbe-UkKEdlMxXm4FVGD6DqTHkQ0TQ5CQJ9jbOMnG0CYxYcSICcTUQz8DrB7CpKUGpqJVMtEqksLlvSJx2ac3Ak.png?r=a41'} alt='profile-image'/>
+            <img className='w-12 lg:w-20 h-auto' src={'https://occ-0-4857-2164.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABTYctxxbe-UkKEdlMxXm4FVGD6DqTHkQ0TQ5CQJ9jbOMnG0CYxYcSICcTUQz8DrB7CpKUGpqJVMtEqksLlvSJx2ac3Ak.png?r=a41'} alt='profile-image'/>
             </button>
             <p className='text-white w-full text-center'>{profile.name}</p>
         </div>
@@ -72,7 +72,7 @@ const Profiles = ({navigation}) => {
                             {setting?
                             <Link href={`?editar-perfil=true&id=${profile.id}`}>
                                 <div className='relative p-5 '>
-                                <Icon path={mdiPencil} size={2} color='white' className='absolute top-0 right-0'/>
+                                <Icon path={mdiPencil} size={1} color='white' className='absolute top-0 right-0 '/>
                                 <CardProfile
                                     profile = {profile}
                                     onPress={(e)=>console.log('')}
@@ -92,18 +92,18 @@ const Profiles = ({navigation}) => {
                      <div style={{flexDirection:'column',justifyContent:'center',alignContent:'center', alignItems:'center', marginLeft:20}}>
                         <Link href="?crear-perfil=true ">
                             <button  className='flex justify-center align-center h-auto w-auto p-2'>
-                                    <Icon path={mdiPlusBox} size={3} color="#ffffffdf"/>
+                                    <Icon path={mdiPlusBox} size={2} color="#ffffffdf"/>
                             </button>
                         </Link>
-                        <p className='text-white w-full text-center'>{'Nuevo perfil'}</p>
+                        <p className='text-white w-full text-center'>{'Crear'}</p>
                     </div>
                     : null}
                       <div style={{flexDirection:'column',justifyContent:'center',alignContent:'center', alignItems:'center', marginLeft:20}}>
                         {!setting?<>
                             <button onClick={()=>setSetting(true)}className='flex justify-center align-center h-auto w-auto p-2'>
-                                <Icon path={mdiPencil} size={3} color="#ffffffdf"/>
+                                <Icon path={mdiPencil} size={2} color="#ffffffdf"/>
                             </button>
-                            <p className='text-white w-full text-center'>{'Editar perfiles'}</p>
+                            <p className='text-white w-full text-center'>{'Editar'}</p>
                         </>
                         :
                         <>
@@ -113,7 +113,7 @@ const Profiles = ({navigation}) => {
                             <p className='text-white w-full text-center'>{'Terminar edicion'}</p>
                         </>
                         }       
-                    </div>
+                    </div>  
                 </div>
                 <div className='container h-auto flex flex-col justify-center items-center'>
                     <p className='text-white'>Cerrar sesion</p>

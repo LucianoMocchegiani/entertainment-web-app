@@ -12,7 +12,7 @@ function CardSerie({serie}){
   return( 
     <div key={serie?.id} className='mx-2 my-2 pb-1 px-1 shadow-lg'>
       <Link type="button"  href={"series/"+serie?.id}>
-      <img src={"https://image.tmdb.org/t/p/w500"+serie?.poster_path} className="w-66 h-80"/></Link>
+      <img src={"https://image.tmdb.org/t/p/w500"+serie?.poster_path} className="w-44 h-66 lg:w-60 lg:h-80"/></Link>
     </div>
   )
 }

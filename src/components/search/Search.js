@@ -42,7 +42,7 @@ const SearchScreen = () => {
                                     return (
                                         <Link type="button"  href={movie.path}>
                                             <div className=''>
-                                                <img src={"https://image.tmdb.org/t/p/w500"+movie?.poster_path} className="w-66 h-80 rounded-sm"/>
+                                                <img src={"https://image.tmdb.org/t/p/w500"+movie?.poster_path} className="w-32 h-66 lg:w-56 lg:h-80 rounded-sm"/>
                                             </div >
                                         </Link> 
                                     )

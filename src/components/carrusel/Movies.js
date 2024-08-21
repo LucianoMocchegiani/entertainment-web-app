@@ -11,7 +11,7 @@ function CardMovie({movie}){
   return(     
     <div key={movie?.id} onClick={()=>getMovieDetailFirebase()} className='mx-2 my-2 pb-1 px-1 shadow-lg'>
       <Link type="button"  href={"movies/"+movie?.id}>
-        <img src={"https://image.tmdb.org/t/p/w500"+movie?.poster_path} className="w-66 h-80"/>
+        <img src={"https://image.tmdb.org/t/p/w500"+movie?.poster_path} className="w-44 h-66 lg:w-60 lg:h-80 "/>
       </Link>
     </div>
   )

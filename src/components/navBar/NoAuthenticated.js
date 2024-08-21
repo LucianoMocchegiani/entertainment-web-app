@@ -12,8 +12,8 @@ export default function NoAuthenticated(){
         setHidden(!hidden)
     }
     return (
-        <>
-            <ul className="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 border-2 border-gray  invisible lg:visible xl:visible 2xl:visible mr-14 z-50">
+        <>  
+            <ul className="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 border-2 border-gray hidden lg:flex mr-14 z-50">
                 <li>
                     <Link href={user?"/into/home":"/login"} type="button" className={pathname === "/login" ? "block py-2 px-3 text-white bg-black rounded" : "block bg-black py-2 px-3 text-white rounded"} aria-current="page">Ingresar</Link>
                 </li>
