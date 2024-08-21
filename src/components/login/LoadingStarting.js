@@ -23,7 +23,7 @@ const LoadingStarting = ({}) => {
     }, [user]);
     return (
         <>{loading?
-            <div className='w-full h-screen fixed bg-black flex justify-center z-50'>
+            <div className='w-full h-screen fixed top-0 bg-black flex justify-center z-50'>
                 <Loading/>
             </div>
             :null} 
