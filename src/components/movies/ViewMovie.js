@@ -27,17 +27,13 @@ const ViewMovie = ({ }) => {
     useEffect(()=>{
         handleSetState()
     },[])
-    useEffect(()=>{
-        console.log(state)
-    },[state])
-
     return !loading ? (
         <>
            <div className='flex flex-col justify-center items-center'>
            <p className='text-white text-lg p-3'>{state?.data?.title}</p>
                 <CustomVideoPlayer/>
                 {!fullscreen?
-                 <div className='flex flex-col justify-center items-center w-8/12'>
+                 <div className='flex flex-col justify-center items-center w-12/12'>
                     <div className='flex flex-row justify-center items-center content-center h-auto py-5'>
                         <p className='text-white mx-5'>13+</p>
                         <p className='text-white mx-5'>{state?.data?.release_date}</p>

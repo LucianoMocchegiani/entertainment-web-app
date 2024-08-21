@@ -1,5 +1,5 @@
 "use client"
-import React from "react";
+import React, { useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -10,10 +10,10 @@ function CardSerie({serie}){
     return( 
       <div key={serie?.id} className='mx-2 my-2 pb-1 px-1 shadow-lg'>
         <Link type="button"  href={"series/"+serie?.id}>
-        <img src={'https://image.tmdb.org/t/p/w500'+serie.still_path} className="w-66 h-80"/></Link>
+        <img src={'https://image.tmdb.org/t/p/w500'+serie.still_path} className="w-72 h-auto lg:w-72 lg:h-auto  "/></Link>
       </div>
     )
-}
+} 
 
 const KeepWatchingSeries = ()=>{
     const {keep_watching_series} = useStorage()
@@ -52,14 +52,14 @@ const KeepWatchingSeries = ()=>{
             }
           }
         ]
-    };
+  };
 	return (
         <>{keep_watching_series.length?
             <>
                 <h3 className="text-white text-lg mt-10">{'Seguir viendo'}</h3>
                 <Slider {...settings} className="pt-1 w-11/12">
                 {keep_watching_series?.map((e)=>(
-                    <CardSerie serie={e}/>
+                    e.id&&<CardSerie serie={e}/>
                 ))}
                 </Slider>
             </>:null}

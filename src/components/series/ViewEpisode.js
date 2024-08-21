@@ -83,7 +83,7 @@ const ViewEpisode = ({}) => {
            <div className='flex flex-col justify-center items-center '>
            <p className='text-white text-lg mb-3 mt-1 p-3'>{serieData?.name}</p>
                 <CustomVideoPlayer/>
-                 <div className='flex flex-col justify-center items-center w-8/12'>
+                 <div className='flex flex-col justify-center items-center w-12/12'>
                     <div className='flex flex-row justify-center items-center content-center h-auto py-1'>
                         <p className='text-white mx-2'>13+</p>
                         <p className='text-white mx-2'>{serieData?.release_date}</p>
