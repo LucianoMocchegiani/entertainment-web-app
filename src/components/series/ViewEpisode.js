@@ -88,7 +88,7 @@ const ViewEpisode = ({}) => {
                         <p className='text-white mx-2'>13+</p>
                         <p className='text-white mx-2'>{serieData?.release_date}</p>
                         <CheckMyList movie={serieData}/>
-                        <Link type="button"  href={`series/${id}/${season}`}
+                        <Link type="button"  href={`/into/series/${id}/`}
                             className='flex flex-row justify-center items-center mx-5'
                         >
                             <Icon path={mdiInformationOutline} size={1} color='white'/>

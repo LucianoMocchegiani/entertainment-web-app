@@ -6,11 +6,11 @@ import Footer from "@/components/footer/Footer";
 export default function LandingPage() {
   return (
     <>
-      <main className="bg-black">
+      <main className="bg-black max-h-screen">
         <PopcornBg/>
         <NavBar/>
         <Landing/>
-        <Footer/>
+        {/* <Footer/> */}
       </main>
     </>
   );

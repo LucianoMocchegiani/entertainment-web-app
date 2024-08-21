@@ -12,7 +12,7 @@ function CardSerie({serie}){
   return( 
     <div key={serie?.id} className='mx-2 my-2 pb-1 px-1 shadow-lg'>
       <Link type="button"  href={"series/"+serie?.id}>
-      <img src={"https://image.tmdb.org/t/p/w500"+serie?.poster_path} className="w-44 h-66 lg:w-60 lg:h-80"/></Link>
+      <img src={"https://image.tmdb.org/t/p/w500"+serie?.poster_path} className="w-44 h-66 lg:w-60 lg:h-72"/></Link>
     </div>
   )
 }
@@ -36,7 +36,7 @@ export default function Series({
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 5,
           slidesToScroll: 2,
           infinite: true,
           dots: true
@@ -53,7 +53,7 @@ export default function Series({
       {
         breakpoint: 480,
         settings: {
-          slidesToShow:3,
+          slidesToShow:2,
           slidesToScroll:1
         }
       }
@@ -84,7 +84,7 @@ export default function Series({
   return(
     <>
       <h3 className="text-white text-lg mt-10">{text}</h3>
-      <Slider {...settings} className="pt-1 w-11/12">
+      <Slider {...settings} className="pt-1 w-10/12">
         {item.length?item.map((e)=>(
           <CardSerie serie={e}/> 
         )): [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16].map((e)=>(

@@ -52,7 +52,7 @@ export default function Layout({ children }) {
         :null}
         <NavBar/>
         {children} 
-        <Footer/>
+        {/* <Footer/> */}
     </>
   );
 }
