@@ -5,7 +5,7 @@ export default function Filters({setGenre, genre, setLabel, label, setVideo, vid
     
     return (
         <>
-            <div className="flex flex-row justify-center items-center">
+            <div className="flex flex-col lg:flex-row justify-center items-center w-full">
             <SelectCategory
                 text={'Filtrar por plataforma'}
                 text2={platform?.name}
@@ -19,6 +19,7 @@ export default function Filters({setGenre, genre, setLabel, label, setVideo, vid
                 ]}
                 selectFunction={setPlatform}
             />
+            <div className="p-2 lg:p-5"></div>
             <SelectCategory
                 text={'Filtrar por generos'}
                 text2={genre?.name}

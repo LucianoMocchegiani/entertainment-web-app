@@ -37,12 +37,12 @@ const SearchScreen = () => {
                 {
                     results?(
                         <>
-                            <div className='flex flex-wrap w-10/12 m-4'>
+                            <div className='flex flex-wrap w-10/12 m-4 justify-center items-center'>
                                 {results.data?.map((movie, item) => {
                                     return (
                                         <Link type="button"  href={movie.path}>
                                             <div className=''>
-                                                <img src={"https://image.tmdb.org/t/p/w500"+movie?.poster_path} className="w-32 h-66 lg:w-56 lg:h-80 rounded-sm"/>
+                                                <img src={"https://image.tmdb.org/t/p/w500"+movie?.poster_path} className="w-40 h-66 lg:w-56 lg:h-80 rounded-sm"/>
                                             </div >
                                         </Link> 
                                     )

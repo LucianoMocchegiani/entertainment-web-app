@@ -82,7 +82,7 @@ export default function ModalSelect({text='Seleccionar',text2='', objValue, arra
 
     return(
         <>
-        <div className="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg dark:bg-stone-700 mr-4 p-4 mt-3">
+        <div className="relative flex flex-col break-words bg-white rounded shadow-lg p-4 min-w-[300px]">
         <div className='containerButtonActive-Select'>
           <p className='title-Select'>{text}</p>
           <Select touchableText = {text2}

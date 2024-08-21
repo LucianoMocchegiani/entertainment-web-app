@@ -11,9 +11,10 @@ const EpisodeCard = ({episodeData})=>{
 	const {id, season, episode} = useParams()
 	return(
 		<Link type="button"  href={`/into/series/${id}/${season}/${episodeData?.episode_number}`}
-			className='flex flex-row w-96 bg-white rounded-sm justify-center items-center mb-5'
+			className='flex flex-row w-11/12 lg:min-w-[400px] lg:max-w-[800px] lg:w-auto bg-white rounded-sm justify-center items-center mb-5 px-2'
 		>
-			<p className='text-black text-lg'>{episodeData?.episode_number+'-  '+episodeData?.name}</p>
+			<p className='text-black text-lg truncate'>{episodeData?.episode_number+'-  '+episodeData?.name}</p>
+			<div className='mx-5'></div>
 			<Icon path={mdiPlayOutline } size={1} color='black'/>
 			<p className='text-black text-sm ml-5'>Reproducir</p>
 		</Link>
@@ -34,7 +35,7 @@ const Detail = async () =>{
                 <div className='bg-custom-linear h-full flex justify-center items-center'>
                 </div>
             </div>
-			<p className='text-white w-8/12 text-lg mb-5'>
+			<p className='text-white w-11/12 lg:w-8/12 text-lg mb-5'>
                 {seasonData?.overview}
             </p>
 			<>

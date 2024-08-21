@@ -34,7 +34,7 @@ const ViewMovie = ({ }) => {
     return !loading ? (
         <>
            <div className='flex flex-col justify-center items-center'>
-           <p className='text-white text-lg'>{state?.data?.title}</p>
+           <p className='text-white text-lg p-3'>{state?.data?.title}</p>
                 <CustomVideoPlayer/>
                 {!fullscreen?
                  <div className='flex flex-col justify-center items-center w-8/12'>
@@ -55,7 +55,7 @@ const ViewMovie = ({ }) => {
                             })
                         }
                     </div>
-                    <p className='text-white w-8/12 text-lg'>
+                    <p className='text-white w-11/12 lg:w-8/12 text-lg'>
                         {state?.data?.overview}
                     </p>
                 </div>:<p className='text-white'>{state?.data?.title}</p>}

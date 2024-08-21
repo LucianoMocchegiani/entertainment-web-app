@@ -12,9 +12,10 @@ const SeasonCard = ({seasonData})=>{
 	const {id, season} = useParams()
 	return(
 		<Link type="button"  href={`/into/series/${id}/${seasonData?.season_number}`}
-			className='flex flex-row w-96 bg-white rounded-sm justify-center items-center mb-5'
+			className='flex flex-row w-11/12 lg:min-w-[400px] lg:max-w-[800px] lg:w-auto bg-white rounded-sm justify-center items-center mb-5 px-2'
 		>
-			<p className='text-black text-lg mr-5'>{seasonData?.season_number+'-  '+seasonData?.name}</p>
+			<p className='text-black text-lg mr-5 truncate'>{seasonData?.season_number+'-  '+seasonData?.name}</p>
+			<div className='mx-5'></div>
 			<Icon path={mdiInformationOutline} size={1} color='black'/>
 			<p className='text-black text-sm ml-1'>Info</p>
 		</Link>	
@@ -45,7 +46,7 @@ const Detail = async () =>{
                     })
                 }
             </div>
-			<p className='text-white w-8/12 text-lg mb-5'>
+			<p className='text-white w-11/12 lg:w-8/12 text-lg mb-5'>
                 {serie?.overview}
             </p>
 			<>

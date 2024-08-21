@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <AuthProvider>
           <StorageProvider>
-          <div className="bg-black w-full h-full">
+          <div className="bg-black w-full h-full min-h-screen">
           {children}
           </div>
           </StorageProvider>

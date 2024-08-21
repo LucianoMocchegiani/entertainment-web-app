@@ -10,7 +10,7 @@ import { useStorage } from '@/context/storageContext';
 import { postProfile } from '../../firebase/endpoints/profiles';
 import { mdiDelete } from '@mdi/js';
 import { mdiCog } from '@mdi/js';
-import { mdiCogStop } from '@mdi/js';
+import { mdiCogStop } from '@mdi/js';   
 import { mdiPencil } from '@mdi/js';
 
 const CardProfile =({profile, onPress})=>{
@@ -64,7 +64,7 @@ const Profiles = ({navigation}) => {
     }
     return (
         <> 
-            <div className='container pt-16 items-center flex flex-wrap justify-center h-screen'>
+            <div className='container items-center flex flex-wrap justify-center min-h-[400px]'>
                 <div className='container h-auto flex flex-wrap justify-center items-center'>
                     {profiles?.map((profile, index)=>{
                         return( 
@@ -108,9 +108,9 @@ const Profiles = ({navigation}) => {
                         :
                         <>
                             <button onClick={()=>setSetting(false)}className='flex justify-center align-center h-auto w-auto p-2'>
-                                <Icon path={mdiPencilOff} size={3} color="#ffffffdf"/>
+                                <Icon path={mdiPencilOff} size={2} color="#ffffffdf"/>
                             </button>
-                            <p className='text-white w-full text-center'>{'Terminar edicion'}</p>
+                            <p className='text-white w-full text-center'>{'Finalizar'}</p>
                         </>
                         }       
                     </div>  
